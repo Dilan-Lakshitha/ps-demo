@@ -45,13 +45,14 @@
 
         <div class="form-group">
             <label for="notes">Notes</label>
-            <textarea id="notes" class="form-control"  [(ngModel)]="userSettings.notes" row="3"></textarea>
+            <textarea id="notes" class="form-control" row="3" [(ngModel)]="userSettings.notes" ></textarea>
         </div>
 
         <div class="form-group">
             <label for="testing">Testing</label>
             <input type="date" id="testing" class="form-control" >
         </div>
+        
 
         <button class="btn btn-primary">Send</button>
     </form>
