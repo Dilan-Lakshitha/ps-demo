@@ -7,13 +7,14 @@ import { UserSettings } from '../data/user-settings';
   styleUrls: ['./user-settings-form.component.css']
 })
 export class UserSettingsFormComponent {
-  userSettings : UserSettings={
+  OriginalUserSettings : UserSettings={
     name: 'Milton',
     emailoffers: true,
     interfaceStyle: 'dark',
     subscriptionType: 'Annual',
     notes:'here are some notes..'
   };
+  userSettings : UserSettings={...this.OriginalUserSettings};
   constructor(){
 
   }
