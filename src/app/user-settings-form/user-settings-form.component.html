@@ -1,5 +1,6 @@
 <div class="container">
     <h2>User Settings</h2>
+    <!-- Styling Form -->
     <form #form="ngForm" (ngSubmit)="OnSubmit(form)">
 
 
@@ -7,8 +8,9 @@
             <label for="name">Name</label>
             <input id="name" name="name" class="form-control" [(ngModel)]="userSettings.name" placeholder="Name" 
             required #nameField="ngModel"
-            (blur)="OnBlur(nameField)"
-            [class.field-error]="form.submitted && nameField.invalid">
+            (blur)="OnBlur(nameField)" 
+            [class.field-error]="form.submitted && nameField.invalid"> <!-- handling Form -->
+
           <div [hidden]="!form.submitted || nameField.valid"
             class="alert alert-danger">
             Enter a name
@@ -62,6 +64,10 @@
             <input type="date" id="testing" class="form-control" >
         </div>
         
+        <div [hidden]="!postError"
+        class="alert alert-danger">
+        {{postErrorMassage}}
+      </div>
 
         <button class="btn btn-primary">Send</button>
     </form>
