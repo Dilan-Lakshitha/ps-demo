@@ -9,7 +9,7 @@ import { UserSettings } from '../data/user-settings';
 export class UserSettingsFormComponent {
   userSettings : UserSettings={
     name: 'Milton',
-    emailOffers: true,
+    emailoffers: true,
     interfaceStyle: 'dark',
     subscriptionType: 'Annual',
     notes:'here are some notes..'
@@ -18,6 +18,6 @@ export class UserSettingsFormComponent {
 
   }
   ngOnInit(){
-    
+
   }
 }
