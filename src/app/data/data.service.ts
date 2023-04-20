@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UserSettings } from './user-settings';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,7 +8,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+  
+  getSubscriptionTypes():Observable<string[]>{
+      return of(['Monthly','Annual','Lifetime']);
+  }
 
   postUserSettingForm(userSettings: UserSettings): Observable<any>{
 
